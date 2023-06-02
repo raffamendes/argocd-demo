@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-quarkus-dev
+spec:
+  destination:
+    namespace: app-quarkus-dev
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: ./dev
+    repoURL: 
+    targetRevision: HEAD
