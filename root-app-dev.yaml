@@ -7,7 +7,21 @@ spec:
     namespace: quarkus-dev
     server: https://kubernetes.default.svc
   project: default
-  source:
-    path: ./dev/quarkus-app
-    repoURL: https://github.com/raffamendes/argocd-demo.git
-    targetRevision: HEAD
+source:
+  repoURL: 'https://github.com/raffamendes/argocd-demo.git'
+  path: ./dev/quarkus-app
+  targetRevision: HEAD
+  helm:
+    valueFiles:
+      - values.yaml
+    parameters:
+      - name: namespace
+        value: quarkus-app
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: quarkus-app
+syncPolicy:
+  automated:
+    prune: true
+    selfHeal: true
+
