@@ -16,7 +16,7 @@ spec:
       maxSurge: 25%
     resources: {}
     activeDeadlineSeconds: 21600
-  triggers: {}
+  triggers: []
   replicas: {{ .Values.replicaCount }}
   revisionHistoryLimit: 10
   test: false
