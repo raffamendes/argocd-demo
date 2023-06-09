@@ -17,14 +17,7 @@ spec:
     resources: {}
     activeDeadlineSeconds: 21600
   triggers:
-    - type: ImageChange
-      imageChangeParams:
-        containerNames:
-          - "{{ .Values.name  }}"
-        from:
-          kind: ImageStreamTag
-          namespace: "{{ .Values.namespace }}"
-          name: "{{ .Values.image.name }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+    - type: ConfigChange
   replicas: {{ .Values.replicaCount }}
   revisionHistoryLimit: 10
   test: false
