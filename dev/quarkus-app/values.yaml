@@ -3,7 +3,7 @@ name: cryostat-test-git
 namespace: quarkus-app
 image:
   name: image-registry.openshift-image-registry.svc:5000/quarkus-app/cryostat-test-git
-  tag: b3ea99dd080976ad16bce8257d3beaa186a95d13
+  tag: 3b4cd0b9192a809d7b57cddb7b7e8b3c47157914
 service:
   type: ClusterIP
   port: 8080
