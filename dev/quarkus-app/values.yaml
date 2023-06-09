@@ -1,6 +1,6 @@
 replicaCount: 1
 name: cryostat-test-git
-namespace: app
+namespace: quarkus-app
 image:
   name: 2f57e6070d05b64217059482be94d70381ed6e11
   tag: image-registry.openshift-image-registry.svc:5000/quarkus-app/cryostat-test-git
