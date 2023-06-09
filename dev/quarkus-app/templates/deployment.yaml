@@ -25,7 +25,7 @@ spec:
           kind: ImageStreamTag
           namespace: "{{ .Values.namespace }}"
           name: "{{ .Values.image.name }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-  replicas: "{{ .Values.replicaCount }}"
+  replicas: {{ .Values.replicaCount }}
   revisionHistoryLimit: 10
   test: false
   selector:
@@ -46,12 +46,12 @@ spec:
               protocol: TCP
             - containerPort: 8443
               protocol: TCP
-          resources: "{}"
+          resources: {}
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
           imagePullPolicy: Always
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
-      securityContext: "{}"
+      securityContext: {}
       schedulerName: default-scheduler
