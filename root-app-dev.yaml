@@ -4,7 +4,7 @@ metadata:
   name: app-quarkus-dev
 spec:
   destination:
-    namespace: app-quarkus-dev
+    namespace: quarkus-dev
     server: https://kubernetes.default.svc
   project: default
   source:
