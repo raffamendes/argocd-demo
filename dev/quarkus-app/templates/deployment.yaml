@@ -16,8 +16,6 @@ spec:
       maxSurge: 25%
     resources: {}
     activeDeadlineSeconds: 21600
-  triggers:
-    - type: ConfigChange
   replicas: {{ .Values.replicaCount }}
   revisionHistoryLimit: 10
   test: false
